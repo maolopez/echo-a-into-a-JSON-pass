@@ -2,7 +2,7 @@
 kill=`ps aux | grep "[c]fs-downloader-18.4.3.jar" | awk '{print $2}'`
 string2="\"MyCFSPass\""
 string3="\"MyPromAppUser\""
-string4="\"MyPromAppUser\"" 
+string4="\"MyPromAppPass\"" 
 #cfs = Cloud File System
 
 ssh -oStrictHostKeyChecking=no app@${TARGETINDEX} "cd /app/;\
