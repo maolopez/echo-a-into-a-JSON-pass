@@ -1,4 +1,4 @@
-# echo-a-into-a-JSON-pass
+# echo-\\\\-or-!-into-a-JSON-pass
 echo a "\\\\" or a "!" into a JSON file pass looks simple, however it can be tricky. Here an example how to include the string "production\\\\frontend" and "MyPass!" into a file like this:
 
 secured {\n
