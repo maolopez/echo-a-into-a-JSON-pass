@@ -7,3 +7,5 @@ cfs-pass = "Jencomart1"\n
 PromApp-user = "MyPromAppUser"\n
 PromApp-pass = "MyPromApppass!"\n
 }
+
+The nohup has been redirected in order to avoid Jenkins builds to hang.
