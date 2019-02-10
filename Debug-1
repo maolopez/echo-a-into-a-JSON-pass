@@ -1,0 +1,17 @@
+#This is how the script works when there is not a PID found
+
+
+++ ps aux
+++ grep '[c]fs-downloader-18.4.3.jar'
+++ awk '{print $2}'
++ kill=7189
++ string2='"MyCFSPass"'
++ string3='"MyPromAppUser"'
++ '[' -z 7189 ']'
++ echo 'CFS is running with PID '\''7189'\'''
+CFS is running with PID '7189'
+$ ssh-agent -k
+unset SSH_AUTH_SOCK;
+unset SSH_AGENT_PID;
+echo Agent pid 6059 killed;
+[ssh-agent] Stopped.
