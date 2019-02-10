@@ -1,0 +1,28 @@
+#Here the debug when a PID is not found
+
+++ ps aux
+++ grep '[c]fs-downloader-18.4.3.jar'
+++ awk '{print $2}'
++ kill=
++ string2='"MyCFSPass"'
++ string3='"MyPromAppUser"'
++ '[' -z '' ']'
++ cd /app/
++ mkdir -p Jenkomart
++ cd Jenkomart/
++ mkdir -p pass
++ cd pass/
++ rm -f prod-pass.conf
++ touch prod-pass.conf
++ echo -e 'secured {\ncfs-pass = "MyCFSPass"\nPromApp-user = "MyPromAppUser"\n}'
++ cat preprod-pass.conf
++ sed -i '/secured {/a cfs-user = "production\\\\frontend"' prod-pass.conf
++ cat prod-pass.conf
++ sed -i '/PromApp-user = "MyPromAppUser"/a PromApp-pass = "MyPromAppPass!"' prod-pass.conf
++ cd /app/cfs_downloader/current
++ nohup java -Dconfig.resource=/prod-pass.conf -cp /app/Jenkomart/pass:./cfs-downloader-18.4.3.jar ca.Jenkomart.downloader.CfsDownloader flush
+$ ssh-agent -k
+unset SSH_AUTH_SOCK;
+unset SSH_AGENT_PID;
+echo Agent pid 7480 killed;
+[ssh-agent] Stopped.
