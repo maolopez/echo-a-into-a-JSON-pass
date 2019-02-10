@@ -8,4 +8,4 @@ PromApp-user = "MyPromAppUser"\n
 PromApp-pass = "MyPromApppass!"\n
 }
 
-The nohup has been redirected in order to avoid Jenkins builds to hang.
+The nohup has been redirected in order to avoid Jenkins builds to hang. Files Debug-1 and Debug-2 will show you how it works!
